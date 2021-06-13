@@ -14,7 +14,7 @@ function Navigation() {
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand">WebSiteName</a>
+                        <Link class="navbar-brand">WebSiteName</Link>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
@@ -25,8 +25,8 @@ function Navigation() {
                             <li><Link to="/faq">FAQ</Link></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a ><span class="glyphicon glyphicon-user"></span></a></li>
-                            <li><a ><i class="fa fa-shopping-bag"> (0) </i></a></li>
+                            <li><Link ><span class="glyphicon glyphicon-user"></span></Link></li>
+                            {/* <li><a ><i class="fa fa-shopping-bag"> (0) </i></a></li> */}
                         </ul> 
                     </div>
                 </div>

@@ -34,16 +34,16 @@ function Product() {
             inCart: false,
             total: ''
         },
-        {
-            id: 4,
-            product: "Plasfree Linear Organic",
-            type: "Linear",
-            price: 100,
-            quantity: 20,
-            total: '',
-            counterVal: 1,
-            inCart: false
-        }
+        // {
+        //     id: 4,
+        //     product: "Plasfree Linear Organic",
+        //     type: "Linear",
+        //     price: 100,
+        //     quantity: 20,
+        //     total: '',
+        //     counterVal: 1,
+        //     inCart: false
+        // }
     ])
 
 
@@ -131,6 +131,7 @@ function Product() {
     };
 
 
+    
     // function minusone(data, id) {
 
     //     const item = data.map(fetch => (
@@ -149,11 +150,11 @@ function Product() {
 
         <div className="container">
             <div className="header">
-
+                <h2><i class="fa fa-shopping-bag"> </i> Cart <sup style={{fontSize:"15px"}}>({total2(data)})</sup> </h2>
                 <table id="customers" className="container">
                     <thead style={{ borderBottom:"2px solid white"}} >
                         <tr style={{ textAlign: "center" }}>
-                            <th >ID</th>
+                            {/* <th >ID</th> */}
                             <th>PRODUCT</th>
                             <th>TYPE</th>
                             <th>PRICE</th>
@@ -168,7 +169,7 @@ function Product() {
                         ) : (
                             <tr key={item.id} style={{ borderBottom:"2px solid white"}}>
 
-                                <td>{item.id}</td>
+                                {/* <td>{item.id}</td> */}
 
                                 <td className="flex" style={{ justifyContent: "center" }}>
                                     <div className="column">
@@ -188,7 +189,7 @@ function Product() {
 
                                 <td>{item.type}</td>
                                 <td>&#8377; {(item.price).toFixed(2)}</td>
-                                <td className="flex-container" style={{ display: "flex", justifyContent: "center", marginTop:"22px" }}>
+                                <td className="flex-container" style={{ display: "flex", justifyContent: "center", marginTop:"22px" ,  borderBottom: "1px solid black" }}>
 
                                     <div> <button style={{ cursor: "pointer", border: "none" }} type="button" id="sub" class="sub" onClick={() => minus(i)} > <i class="fa fa-minus" aria-hidden="true"></i></button> </div> &nbsp;
                                     <div > {item.quantity}</div> &nbsp;
@@ -200,14 +201,14 @@ function Product() {
                         )
                     ))}
 
-                    <td colSpan={5} style={{ textAlign: "right" }}> <h5><b>SUBTOTAL </b></h5></td>
+                    <td colSpan={4} style={{ textAlign: "right" }}> <h5><b>SUBTOTAL </b></h5></td>
                     <td ><h4><b>&#8377; {total1(data).toFixed(2)}</b></h4></td>
                     {/* <td colSpan="5">SUBTOTAL  &#8377; {total2(data)}</td> */}
                 </table>
                 <div className="container">
                     <div class="row">
                         <div className="col-sm-9" style={{ fontSize: "17px", textAlign: "right", marginTop: "8px" }}>Shipping, taxes, and discounts calculated at checkout.</div>
-                        <div className="col-sm-3"><button type="button" style={{ width: "200px", height: "50px", color: "#1D1C1C", fontSize:"1" }} class="btn btn-lg">CHECK-OUT</button></div>
+                        <div className="col-sm-3"><button type="button" style={{ width: "200px", height: "50px", color: "#1D1C1C", fontSize:"1" }} class="btn btn-lg" >CHECK-OUT</button></div>
                     </div>
                 </div>
 
