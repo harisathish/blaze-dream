@@ -74,7 +74,7 @@ function Product() {
                 } else if (i === o) {
 
                     if (item.quantity > 19) {
-
+                
                         return item;
                     } else
                         return {
@@ -129,6 +129,21 @@ function Product() {
             })
         );
     };
+
+    const checkOut = i => {
+        setData(prevCart =>
+            prevCart.map((item, o) => {
+               
+                    return {
+                        ...item,
+                        quantity: 0,
+                        counterVal: 1,
+                        inCart: false
+                }
+            })
+        );
+    };
+
 
 
     
@@ -208,8 +223,10 @@ function Product() {
                 <div className="container">
                     <div class="row">
                         <div className="col-sm-9" style={{ fontSize: "17px", textAlign: "right", marginTop: "8px" }}>Shipping, taxes, and discounts calculated at checkout.</div>
-                        <div className="col-sm-3"><button type="button" style={{ width: "200px", height: "50px", color: "#1D1C1C", fontSize:"1" }} class="btn btn-lg" >CHECK-OUT</button></div>
-                    </div>
+                       
+                        <div className="col-sm-3"><button type="button" style={{ width: "200px", height: "50px", color: "#1D1C1C", fontSize:"1" }} class="btn btn-lg" onClick={()=>checkOut()}>CHECK-OUT</button></div>
+                     
+                        </div>
                 </div>
 
 

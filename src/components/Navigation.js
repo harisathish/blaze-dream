@@ -14,7 +14,7 @@ function Navigation() {
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <Link class="navbar-brand">WebSiteName</Link>
+                        {/* <Link class="navbar-brand">WebSiteName</Link> */}
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
